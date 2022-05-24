@@ -14,7 +14,6 @@ The list of children of `n` in the TreeOrder. Optionally, target can be used to 
 a subtree of the entire TreeOrder.
 """
 children(n::TreeOrder; target::TreeOrder) = children(n)
-children(::TreeOrder) = error("not implemented")
 
 """
     TreePVal{T,D <: TreeOrder}

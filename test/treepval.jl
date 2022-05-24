@@ -57,5 +57,16 @@
         @test get(tree, to"00x") == 6
         @test get(tree, to"00x") == 6
         @test get(tree, to"01x") == 0
+
+        try
+            get(tree, to"11x")
+        catch e
+            @test e isa PersistentVals._TimestampInvalid
+            buf = IOBuffer()
+            showerror(buf, e)
+            message = String(take!(buf))
+            errmsg = "Cannot get/set timestamp $(to"11x"). Only leaves can have values."
+            @test message == errmsg
+        end
     end
 end
