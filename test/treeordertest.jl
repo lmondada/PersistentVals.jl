@@ -48,8 +48,8 @@ function PersistentVals.children(t::TreeOrderTest; target)
     i = 0
     found = false
     while !found && i < t.d
-        for j in 0:(t.n-1)
-            val = 10*i + j
+        for j in 0:(t.n - 1)
+            val = 10 * i + j
             if val in t.contents && val ∉ target.contents
                 found = true
             end
@@ -58,10 +58,10 @@ function PersistentVals.children(t::TreeOrderTest; target)
     end
 
     ret = []
-    unchanged = Set([x for x in t.contents if x ÷ 10  != i])
-    for j in 0:(t.n-1)
+    unchanged = Set([x for x in t.contents if x ÷ 10 != i])
+    for j in 0:(t.n - 1)
         newel = copy(unchanged)
-        push!(newel, i*10 + j)
+        push!(newel, i * 10 + j)
         push!(ret, TreeOrderTest(newel, t.n, t.d))
     end
     return ret
