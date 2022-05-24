@@ -1,0 +1,7 @@
+name = "PersistentVals"
+uuid = "58a51918-1342-4309-8c35-056685ee93c2"
+authors = ["Luca Mondada <luca@mondada.net>"]
+version = "0.1.0"
+
+[compat]
+julia = "1.2"
