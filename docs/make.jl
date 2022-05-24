@@ -13,12 +13,7 @@ makedocs(;
         canonical="https://lmondada.github.io/PersistentVals.jl",
         assets=String[],
     ),
-    pages=[
-        "Home" => "index.md",
-    ],
+    pages=["Home" => "index.md"],
 )
 
-deploydocs(;
-    repo="github.com/lmondada/PersistentVals.jl",
-    devbranch="main",
-)
+deploydocs(; repo="github.com/lmondada/PersistentVals.jl", devbranch="main")
